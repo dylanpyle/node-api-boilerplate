@@ -21,5 +21,8 @@
     "node-fetch": "1.5.3",
     "tap-spec": "4.1.1",
     "tape": "4.6.0"
+  },
+  "scripts": {
+    "test": "make lint && make test"
   }
 }
