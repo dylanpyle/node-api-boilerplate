@@ -1,5 +1,7 @@
 # node-api-boilerplate
 
+[![CircleCI](https://circleci.com/gh/dylanpyle/node-api-boilerplate.svg?style=svg)](https://circleci.com/gh/dylanpyle/node-api-boilerplate)
+
 A starting point for new API services in Node.js / PostgreSQL. Based on my own
 personal preferences and experiences, which may not match yours.
 
