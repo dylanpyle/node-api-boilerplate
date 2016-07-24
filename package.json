@@ -1,0 +1,25 @@
+{
+  "name": "node-api-boilerplate",
+  "version": "1.0.0",
+  "description": "A starting point for new services in node.js",
+  "main": "index.js",
+  "author": "Dylan Pyle <me@dylanpyle.com>",
+  "license": "MIT",
+  "dependencies": {
+    "co-body": "4.2.0",
+    "knex": "0.11.9",
+    "koa": "1.2.1",
+    "koa-router": "5.4.0",
+    "node-uuid": "1.4.7",
+    "pg": "6.0.3",
+    "pg-rethrow": "1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "3.1.1",
+    "eslint-config-airbnb-base": "4.0.2",
+    "eslint-plugin-import": "1.11.1",
+    "node-fetch": "1.5.3",
+    "tap-spec": "4.1.1",
+    "tape": "4.6.0"
+  }
+}

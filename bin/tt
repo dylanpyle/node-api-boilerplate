@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Run a single test
+# Usage: `bin/tt services/points/spec.js`
+node $1 | $(npm bin)/tap-spec
