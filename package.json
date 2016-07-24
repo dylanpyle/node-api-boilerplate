@@ -23,6 +23,7 @@
     "tape": "4.6.0"
   },
   "scripts": {
+    "start": "make serve",
     "test": "make lint && make test"
   }
 }
