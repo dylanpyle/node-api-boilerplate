@@ -5,6 +5,7 @@
   },
   "rules": {
     "import/no-extraneous-dependencies": [2, {"devDependencies": true}],
+    "import/newline-after-import": 0,
     "comma-dangle": [2, "never"],
     "arrow-body-style": [0]
   }
