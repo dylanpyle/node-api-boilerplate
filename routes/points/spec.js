@@ -21,14 +21,14 @@ test('GET /points returns an array of points', (t) => {
     return get('/points');
   }).then(([response, body]) => {
     t.equal(response.status, 200, 'status=200');
-    t.deepEqual(body, [point]);
+    t.deepEqual(body, [point], 'body is correct');
   });
 });
 
 test('POST /points returns a 400 if required data is missing', (t) => {
   return post('/points', { body: {} })
     .then(([response]) => {
-      t.equal(response.status, 400);
+      t.equal(response.status, 400, 'status=400');
     });
 });
 
@@ -36,7 +36,7 @@ test('POST /points returns new point data', (t) => {
   return post('/points', {
     body: { title: 'Great Point', description: 'Yes' }
   }).then(([response, body]) => {
-    t.equal(response.status, 201);
+    t.equal(response.status, 201, 'status=201');
     t.equal(body.title, 'Great Point');
     t.equal(body.description, 'Yes');
   });
