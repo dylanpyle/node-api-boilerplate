@@ -4,6 +4,10 @@ const tape = require('tape');
 
 const db = require('../services/db');
 
+tape.onFinish(() => {
+  db.destroy();
+});
+
 function afterEach() {
   // Very naive 'wipe the database' query.
   // Should be expanded to reset sequences, be more efficient, &etc.

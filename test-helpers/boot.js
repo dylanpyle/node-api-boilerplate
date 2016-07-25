@@ -3,7 +3,6 @@
 const test = require('tape');
 
 const app = require('../index');
-const db = require('../services/db');
 
 const port = process.env.TEST_PORT || 5101;
 
@@ -14,7 +13,6 @@ console.log(`Running test server on :${port}`);
 
 test.onFinish(() => {
   server.close();
-  db.destroy();
 });
 
 module.exports = {
