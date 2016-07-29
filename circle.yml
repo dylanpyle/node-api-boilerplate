@@ -4,7 +4,7 @@ machine:
   node:
     version: 6.*
 
-checkout:
-  post:
+test:
+  pre:
     - $(npm bin)/knex migrate:latest
 
