@@ -2,23 +2,19 @@ SHELL := /bin/bash
 .PHONY: install serve test lint preflight
 
 # Install dependencies
-install:
-	@make preflight
+install: preflight
 	npm install
 
 # Run a local development server
-serve:
-	@make preflight
+serve: preflight
 	node index.js
 
 # Run the test suite
-test:
-	@make preflight
+test: preflight
 	$$(npm bin)/tape **/*/spec.js | $$(npm bin)/tap-spec
 
 # Static analysis
-lint:
-	@make preflight
+lint: preflight
 	$$(npm bin)/eslint . --ignore-path .gitignore
 
 preflight:
