@@ -22,6 +22,10 @@
     "tap-spec": "4.1.1",
     "tape": "4.6.0"
   },
+  "engines": {
+    "node": "6.*",
+    "npm": "3.*"
+  },
   "scripts": {
     "start": "make serve",
     "test": "make lint && make test"
