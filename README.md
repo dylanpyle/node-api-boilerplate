@@ -25,6 +25,7 @@ Stack:
 
 - node.js (v6+)
 - postgresql
+- A local database (`$ createdb bp`, or choose a different name in `knexfile.js`)
 
 ## Usage
 
