@@ -4,6 +4,10 @@ const tape = require('tape');
 
 const db = require('../services/db');
 
+const TABLES = [
+  'points'
+];
+
 tape.onFinish(() => {
   db.destroy();
 });
@@ -11,13 +15,11 @@ tape.onFinish(() => {
 function afterEach() {
   // Very naive 'wipe the database' query.
   // Should be expanded to reset sequences, be more efficient, &etc.
-  const tables = [
-    'points'
-  ];
+  const query = TABLES
+    .map((table) => `truncate table ${table} cascade;`)
+    .join('\n');
 
-  return Promise.all(tables.map((table) =>
-    db.raw(`truncate table ${table} cascade`)
-  ));
+  return db.raw(query);
 }
 
 // Run a test in a 'fresh' environment; clear DB and any stubs
