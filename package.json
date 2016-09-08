@@ -8,7 +8,7 @@
   "dependencies": {
     "co-body": "4.2.0",
     "knex": "0.11.10",
-    "koa": "1.2.2",
+    "koa": "1.2.3",
     "koa-router": "5.4.0",
     "node-uuid": "1.4.7",
     "pg": "6.1.0",
