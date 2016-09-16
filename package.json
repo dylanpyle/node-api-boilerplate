@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "co-body": "4.2.0",
-    "knex": "0.12.0",
+    "knex": "0.12.1",
     "koa": "1.2.4",
     "koa-router": "5.4.0",
     "node-uuid": "1.4.7",
