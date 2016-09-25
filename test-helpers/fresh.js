@@ -22,7 +22,7 @@ function afterEach() {
   // Very naive 'wipe the database' query.
   // Should be expanded to reset sequences, be more efficient, &etc.
   const query = TABLES
-    .map((table) => `truncate table ${table} cascade;`)
+    .map(table => `truncate table ${table} cascade;`)
     .join('\n');
 
   return db.raw(query);
