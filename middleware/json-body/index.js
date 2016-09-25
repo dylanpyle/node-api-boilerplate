@@ -5,7 +5,7 @@
 
 const parse = require('co-body');
 
-module.exports = function* jsonBody(next) {
+function* jsonBody(next) {
   if (['POST', 'PUT', 'PATCH'].includes(this.method)) {
     try {
       this.state.body = yield parse.json(this);
@@ -19,4 +19,6 @@ module.exports = function* jsonBody(next) {
   }
 
   yield next;
-};
+}
+
+module.exports = jsonBody;

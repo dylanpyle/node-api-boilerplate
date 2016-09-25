@@ -3,7 +3,7 @@
 // Handle non-500 controller errors gracefully. Instead of outputting to
 // stdout/stderr, just return them in a JSON response body.
 
-module.exports = function* errors(next) {
+function* errors(next) {
   try {
     yield next;
   } catch (err) {
@@ -19,4 +19,6 @@ module.exports = function* errors(next) {
       this.body = { message: err.message };
     }
   }
-};
+}
+
+module.exports = errors;

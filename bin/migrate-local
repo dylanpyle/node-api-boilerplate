@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+echo 'Migrating local DB'
+DATABASE_URL='postgres://localhost/bp' $(npm bin)/knex migrate:latest
+
+echo 'Migrating local test DB'
+DATABASE_URL='postgres://localhost/bp-test' $(npm bin)/knex migrate:latest

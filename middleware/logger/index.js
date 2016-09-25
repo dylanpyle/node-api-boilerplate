@@ -10,7 +10,7 @@ function stringify(obj) {
   });
 }
 
-module.exports = function* logger(next) {
+function* logger(next) {
   const start = Date.now();
   yield next;
   const ms = Date.now() - start;
@@ -22,4 +22,6 @@ module.exports = function* logger(next) {
     status: this.status,
     responseTime: ms
   }));
-};
+}
+
+module.exports = logger;

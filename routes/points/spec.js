@@ -1,7 +1,7 @@
 'use strict';
 
-const PointsService = require('../../services/points');
-const test = require('../../test-helpers/fresh');
+const PointsDAO = require('../../dao/points');
+const { test } = require('../../test-helpers/fresh');
 const { get, post } = require('../../test-helpers/http');
 
 test('GET /points returns an empty list if none exist', (t) => {
@@ -13,15 +13,15 @@ test('GET /points returns an empty list if none exist', (t) => {
 });
 
 test('GET /points returns an array of points', (t) => {
-  let point;
+  let pointJSON;
 
-  return PointsService.create('Name', 'Description').then((_point) => {
-    point = _point;
+  return PointsDAO.create({ title: 'Name', description: 'Description'}).then((point) => {
+    pointJSON = JSON.parse(JSON.stringify(point));
 
     return get('/points');
   }).then(([response, body]) => {
     t.equal(response.status, 200, 'status=200');
-    t.deepEqual(body, [point], 'body is correct');
+    t.deepEqual(body, [pointJSON], 'body is correct');
   });
 });
 

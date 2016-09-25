@@ -53,7 +53,7 @@ $ bin/tt services/points/spec.js
 See [knexjs.org](http://knexjs.org/#Migrations)
 
 ```bash
-$ $(npm bin)/knex migrate:latest
+$ bin/migrate-local   # Migrate local DBs to latest schema
 $ $(npm bin)/knex migrate:rollback
 $ $(npm bin)/knex migrate:make my-migration-name
 ```
