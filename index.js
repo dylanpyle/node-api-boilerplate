@@ -1,6 +1,7 @@
 'use strict';
 
 const koa = require('koa');
+
 const app = module.exports = koa();
 
 const errors = require('./middleware/errors');

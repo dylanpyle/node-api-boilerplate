@@ -2,6 +2,7 @@
 
 const requireProperties = require('./index');
 const { test } = require('../../test-helpers/fresh');
+
 const ok = Promise.resolve();
 
 test('requireProperties throws an error if properties are missing', (t) => {

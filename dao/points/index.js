@@ -7,7 +7,7 @@ const db = require('../../services/db');
 const first = require('../../services/first');
 const Point = require('../../domain-objects/point');
 
-const instantiate = (data) => new Point(data);
+const instantiate = data => new Point(data);
 
 function create(data) {
   return db('points')

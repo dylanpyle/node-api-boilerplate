@@ -6,7 +6,7 @@ const qs = require('querystring');
 
 function stringify(obj) {
   return qs.stringify(obj, ', ', '=', {
-    encodeURIComponent: (val) => val
+    encodeURIComponent: val => val
   });
 }
 
