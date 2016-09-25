@@ -15,7 +15,7 @@ test('GET /points returns an empty list if none exist', (t) => {
 test('GET /points returns an array of points', (t) => {
   let pointJSON;
 
-  return PointsDAO.create({ title: 'Name', description: 'Description'}).then((point) => {
+  return PointsDAO.create({ title: 'Name', description: 'Description' }).then((point) => {
     pointJSON = JSON.parse(JSON.stringify(point));
 
     return get('/points');
