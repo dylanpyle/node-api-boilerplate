@@ -25,7 +25,16 @@ Stack:
 
 - node.js (v6+)
 - postgresql
-- A local database (`$ createdb bp`, or choose a different name in `knexfile.js`)
+
+The default configuration uses 2 local databases - one for running tests
+against, one for serving persistent data. To create these locally:
+
+```bash
+$ createdb bp
+$ createdb bp-test
+```
+
+— or change the configuration in `knexfile.js`.
 
 ## Usage
 
