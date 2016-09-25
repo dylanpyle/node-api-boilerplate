@@ -4,6 +4,7 @@ const koa = require('koa');
 const app = module.exports = koa();
 
 const errors = require('./middleware/errors');
+const headers = require('./middleware/headers');
 const jsonBody = require('./middleware/json-body');
 const logger = require('./middleware/logger');
 const poweredBy = require('./middleware/powered-by');
@@ -14,6 +15,7 @@ const pointsRoutes = require('./routes/points');
 app.use(logger);
 app.use(errors);
 app.use(jsonBody);
+app.use(headers);
 app.use(poweredBy);
 
 // Route-specific middleware
