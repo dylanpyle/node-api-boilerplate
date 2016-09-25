@@ -11,7 +11,7 @@ serve: preflight
 
 # Run the test suite
 test: preflight
-	$$(npm bin)/tape **/*/spec.js | $$(npm bin)/tap-spec
+	NODE_ENV=test $$(npm bin)/tape **/*/spec.js | $$(npm bin)/tap-spec
 
 # Static analysis
 lint: preflight
