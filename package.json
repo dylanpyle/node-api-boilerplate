@@ -17,7 +17,7 @@
   "devDependencies": {
     "eslint": "3.9.0",
     "eslint-config-airbnb-base": "9.0.0",
-    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-import": "2.2.0",
     "node-fetch": "1.6.3",
     "sinon": "1.17.6",
     "tap-spec": "4.1.1",
