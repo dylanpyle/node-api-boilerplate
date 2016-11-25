@@ -15,7 +15,7 @@
     "pg-rethrow": "1.0.1"
   },
   "devDependencies": {
-    "eslint": "3.9.1",
+    "eslint": "3.11.0",
     "eslint-config-airbnb-base": "10.0.1",
     "eslint-plugin-import": "2.2.0",
     "node-fetch": "1.6.3",
