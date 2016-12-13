@@ -11,7 +11,7 @@
     "koa": "1.2.4",
     "koa-router": "5.4.0",
     "node-uuid": "1.4.7",
-    "pg": "6.1.0",
+    "pg": "6.1.2",
     "pg-rethrow": "1.0.1"
   },
   "devDependencies": {
