@@ -9,7 +9,7 @@
     "co-body": "4.2.0",
     "knex": "0.12.6",
     "koa": "1.2.4",
-    "koa-router": "5.4.0",
+    "koa-router": "7.1.0",
     "node-uuid": "1.4.7",
     "pg": "6.1.0",
     "pg-rethrow": "1.0.1"
